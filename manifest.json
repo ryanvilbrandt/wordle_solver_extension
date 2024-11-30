@@ -15,5 +15,9 @@
       "matches": ["https://wordlearchive.com/*", "https://www.nytimes.com/games/wordle/index.html"],
       "js": ["wordle_solver.js"]
     }
+  ],
+
+  "web_accessible_resources": [
+    "wordle_dictionary.json"
   ]
 }

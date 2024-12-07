@@ -3,7 +3,8 @@ let word_list = null;
 
 async function fetch_word_list() {
     if (word_list === null) {
-        const dictionary_file_path = browser.runtime.getURL("wordle_dictionary.json");
+        const browserAPI = typeof browser !== "undefined" ? browser : chrome;
+        const dictionary_file_path = browserAPI.runtime.getURL("wordle_dictionary.json");
         const response = await fetch(dictionary_file_path);
         word_list = await response.json();
     }

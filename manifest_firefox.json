@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Wordle Solver",
+  "version": "0.1",
+
+  "description": "Adds hints and help to Wordle games",
+
+  "icons": {
+    "48": "icons/icon-48.gif",
+    "96": "icons/icon-96.gif"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://wordlearchive.com/*", "https://www.nytimes.com/games/wordle/index.html"],
+      "js": ["wordle_solver.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "wordle_dictionary.json"
+  ]
+}
